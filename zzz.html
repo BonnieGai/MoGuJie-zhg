@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding:0px;margin:0px;list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			.box{
+				width: 790px;
+				height: 340px;
+				border: 1px solid black;
+				position: relative;
+				margin: 50px auto;
+				overflow: hidden;
+			}
+			.box ul{
+				position: absolute;
+				left:0px;
+				top:0px;
+			}
+			.box ul li{
+				width: 790px;
+				float: left;
+			}
+			.box ol{
+				position: absolute;
+				left:50%;
+				margin-left: -91px;
+				bottom:20px;
+				background-color: hsla(0,0%,100%,.5);
+				padding: 4px 8px;
+				border-radius: 12px;
+			}
+			.box ol li{
+				float: left;
+				width: 12px;
+				height: 12px;
+				margin-right: 10px;
+				border-radius: 50%;
+				background-color: #fff;
+				text-indent:-99999px;
+				cursor: pointer;
+			}
+			.box ol li.active{
+				background: #db192a;
+			}
+			#left,#right{
+				display: none;
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -30px;
+			    width: 30px;
+			    height: 60px;
+			    background-color: rgba(0,0,0,.1);
+			    line-height: 60px;
+			    text-align: center;
+			    color: #fff;
+			    
+			}
+			#left:hover,#right:hover{
+				background-color: #333;
+			}
+			#left{
+				left:0px;
+			}
+			#right{
+				right:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li><a href="#"><img src="img/1.jpg"></a></li>
+				<li><a href="#"><img src="img/2.jpg"></a></li>
+				<li><a href="#"><img src="img/3.jpg"></a></li>
+				<li><a href="#"><img src="img/4.jpg"></a></li>
+				<li><a href="#"><img src="img/5.jpg"></a></li>
+				<li><a href="#"><img src="img/6.jpg"></a></li>
+				<li><a href="#"><img src="img/7.jpg"></a></li>
+				<li><a href="#"><img src="img/8.jpg"></a></li>
+			</ul>
+			<ol>
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+			</ol>
+			<a href="javascript:;" id="left">&lt;</a>
+			<a href="javascript:;" id="right">&gt;</a>
+		</div>	
+		<script src="public.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var oBox=document.getElementsByClassName("box")[0];
+			var oUl=document.getElementsByTagName("ul")[0];
+			var oBtn=document.getElementsByTagName("ol")[0].children;
+			var oLi=oUl.children;
+			
+			var first=oUl.children[0].cloneNode(true);
+			var last=oUl.children[oUl.children.length-1].cloneNode(true);
+			oUl.appendChild(first);
+			oUl.insertBefore(last,oUl.children[0]);
+			var oLiwidth=oLi[0].offsetWidth;
+			oUl.style.width=oLiwidth*oLi.length+"px";
+			oUl.style.left=-oLiwidth+"px";
+			
+			var oLeft=document.getElementById("left");
+			var oRight=document.getElementById("right");
+			
+			var num=0;
+			var timer=null;
+			var bstop=true;
+			for(var i=0;i<oBtn.length;i++){
+				oBtn[i].index=i;
+				oBtn[i].onclick=function(){
+					num=this.index;
+					autoPlay();
+					oBtn[num].className="active";
+					
+				}
+			}
+//			alert(oBtn.length);
+
+			function autoPlay(){
+				for(var j=0;j<oBtn.length;j++){
+					oBtn[j].className="";
+				}
+				buffermove(oUl,{left:-(num+1)*oLiwidth},function(){
+					if(num==oBtn.length){
+						num=0;
+						oUl.style.left=-oLiwidth+"px";
+					}
+					if(num==-1){
+						num=oBtn.length-1;
+						oUl.style.left=-oLiwidth*oBtn.length+"px";
+					}
+					bstop=true;
+				})
+			}
+			
+			oLeft.onclick=function(){
+				if(bstop){
+					bstop=false;
+					num--;
+					autoPlay();
+					
+					if(num==-1){
+						oBtn[oBtn.length-1].className="active";
+					}else{
+						oBtn[num].className="active";
+					}
+				}
+			}
+			oRight.onclick=function(){
+				if(bstop){
+					bstop=false;
+					num++;
+					autoPlay();
+					if(num==oBtn.length){
+						oBtn[0].className="active";
+					}else{
+						oBtn[num].className="active";
+					}
+				}
+			}
+			
+			oBox.onmouseover=function(){
+				oRight.style.display="block";
+				oLeft.style.display="block";
+				clearInterval(timer);
+			}
+			oBox.onmouseout=function(){
+				oRight.style.display="none";
+				oLeft.style.display="none";
+				timer=setInterval(function(){
+					oRight.onclick();
+				},2000)
+			}
+			
+			timer=setInterval(function(){
+				oRight.onclick();
+			},2000)
+			
+			
+		/**
+		 * 幻灯片的效果综合了前面的京东轮播和自动轮播的思想，
+		 * 在这里你有一个大bug;在回调函数中，有重要的效果css样式，要保证必须要走完回调函数才能完成剩下的切换，这里仍然利用开关的思想设置；
+		 */
+			
+		</script>
+	</body>
+</html>
