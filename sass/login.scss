@@ -1,0 +1,312 @@
+$w:100%;
+$h:100%;
+@import "index";
+
+@mixin size($width,$height){
+    width: $width;
+    height: $height;
+}
+@mixin text-overflow(){
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin wrap{
+    .wrap_hea{
+        width:1200px;
+        overflow: hidden;
+        margin:0 auto;
+        height:70px;
+    }
+}
+
+
+         %msg{
+                 width:265px;
+                height:28px;
+                border:1px solid #ffd797;
+                background: url(https://s10.mogucdn.com/pic/140408/o613k_kqzfunswozbg2s2ugfjeg5sckzsew_16x16.png) 12px no-repeat #fffff8;
+                line-height:28px;
+                color:#FF1581;
+                padding-left:40px;
+                margin-bottom:9px;
+            }
+        %input{
+            width:293px;
+            height: 38px;
+            border:1px solid #CFCFCF;
+            padding:0 6px;
+            outline: none;
+            margin-bottom: 15px;
+            background:none;
+        }
+        %bottom{
+            
+        }
+        
+
+#login_header{
+    width:$w;
+    background: #FFFFFF;
+    overflow: hidden;
+    @include wrap;
+    .wrap_hea{
+        padding:20px 0;
+    }
+    .logo{
+        overflow: hidden;
+        width:100%;
+        height:100%;
+        a{
+            background:url(../img/upload_ie4gkmjvgvqtiytdg4zdambqgiyde_220x52.png) no-repeat;
+            width:$w;  
+            display: inline-block; 
+            height:52px;
+            
+        } 
+    }
+    .message{
+        width:860px;
+        height:28px;
+        line-height: 28px;
+        border:1px solid #ffc0cc;
+        margin-left:20px;
+        text-align: center;
+        font-size:12px;
+        color:#666;
+        display: inline-block;
+        position: absolute;
+        top:32px;
+        left:255px;
+        background-color: #ffefef;
+    }
+}
+
+#main{
+    width:$w;
+    .wrap{
+        width:$w;
+        background:url(https://s10.mogucdn.com/mlcdn/c45406/171122_1ekijgc892hljkb5k0dhfa3dg8514_1920x600.jpg) no-repeat center center;
+        height:600px;
+    }
+    .box_none{
+        width:62.5%;
+        height:600px;
+        float:left;
+    }
+    .content{
+        width: 356px;
+        float: left;
+        display: inline;
+        padding: 0 0 30px 44px;
+        background-color: #ffeceb;
+        margin-top: 80px;
+        opacity: .9;
+//      height:380px;
+        .saoyisao{
+            width:100%;
+//          height:380px;
+            position: relative;
+            display: none;
+        }
+        .computer{
+            position: absolute;
+            top:5px;
+            right:5px;
+            cursor: pointer;
+            height: 53px;
+            width: 53px;
+            background: url(https://s10.mogucdn.com/p1/160418/upload_ifrdcojvgftdmmbqhazdambqmeyde_52x53.png) no-repeat;
+        }
+        .sao_top{
+            position: absolute;
+            height: 80px;
+            left: 60px;
+            top: 30px;
+            width: 200px;
+            background: url(https://s10.mogucdn.com/p1/160418/upload_ie4wiojrg43dombqhazdambqgqyde_190x37.png) no-repeat;
+        }
+        .sao_img{
+            width:200px;
+            height:205px;
+            position: absolute;
+            top:105px;
+            left:56px;
+            background: url(../img/saoyisao.jpg);
+        }       
+        .bot{
+            width:1005px;
+            height:30px;
+            line-height: 30px;
+            text-align: center;
+            position: absolute;
+            bottom:20px;
+            left:21%;
+            a{
+                text-decoration: underline;
+                font-size:18px;
+                text-align: center;
+            }
+        }
+    }
+    
+    //登录
+    .login{
+        width:100%;
+        height:389px;
+        position: relative;
+        .erweima{
+            height: 46px;
+            width: 46px;
+            background: url(https://s10.mogucdn.com/p1/160418/upload_ie4tmnzrmuydmmbqhazdambqgqyde_46x46.png) no-repeat;
+            cursor: pointer;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+        .tab{
+            width:100%;
+            height: 70px;
+            margin-left:-37px;
+            overflow: hidden;
+            .putong_login,.phone_login{
+                width:50%;
+                height:54px;
+                float:left;
+                border-bottom: 1px solid #ccc;
+                text-align: center;
+                a{
+                    color: #fe617a;
+                    height: 42px;
+                    border-bottom: 2px solid #ff4066;
+                    line-height: 41px;
+                    font-weight: 700;
+                    font-size:14px;
+                    text-align: center;
+                    margin:10px auto 0;
+                    width:119px;
+                    display: inline-block;
+                }
+            }
+        }
+        
+        
+        
+    /*box_login 普通登录*/
+        .box_login{
+            width:100%;
+            height:248px;
+            position:absolute;
+            display: none;
+           
+            .msg{
+                @extend %msg;
+            }
+            #myfrom{
+                width:100%;
+                input{
+                    @extend %input;
+                }
+                .sub_box{
+                    width:308px;
+                    height:38px;
+                    margin-top:10px;
+                    background: #ff5777;
+                    input{
+                        width:305px;
+                        height: 36px;
+                        border:none;
+                        padding:0 6px;
+                        outline: none;
+                        margin-bottom: 15px;
+                        color:white;
+                    }
+                }
+            }
+        }
+        .other_login{
+            margin-top:20px;
+            width:100%;
+            height:25px;
+            .qq{
+                background:url(http://s17.mogucdn.com/p2/170104/upload_5763lkilh8f7abid345gbhh167d79_19x19.png) no-repeat;
+                width:25%;
+                height:19px;
+                display: inline-block;
+                float:left;
+                text-indent: 20px;
+            }
+            .weixin{
+                width:50%;
+                height:19px;
+                display: inline-block;
+                float:left;
+                background:url(http://s16.mogucdn.com/p2/170104/upload_8d4dd486c18961b55lf0hbe5ebf7l_18x19.png) no-repeat;
+                text-indent: 20px;
+            }
+        }
+        #forget{
+            width:100%;
+            padding-right:40px;
+            margin-top:20px;
+            text-align: right;
+            display: inline-block;
+            a{
+                text-decoration: underline;
+                padding-right:20px;
+            }
+        }
+    }
+}
+
+/*手机无密码登录*/
+#phone_login{
+    width:100%;
+//  display: none;
+    .msg{
+        @extend %msg;
+    }
+    input{
+        @extend %input;
+    }
+    .active_code{
+        width:110px;
+        height:42px;
+        background:#ff5777;
+        line-height: 42px;
+        color:white;
+        display: inline-block;
+        float: left;
+        text-align: center;
+        margin-right:10px;
+        
+    }
+    input.active_pass{
+        @extend %input;
+        
+        width:192px;
+        float:left;
+    }
+    ._login{
+        width:308px;
+        height:38px;
+        margin-top:10px;
+        background: #ff5777;
+        border:none;
+        text-align: center;
+        color:white;
+    }
+//  #fast_reg{
+//      width:100%;
+//      height:28px;
+//      padding-left:10px;
+//      display: inline-block;
+//  }
+        
+}
+
+#footer{
+    @extend %footer;
+}
+
