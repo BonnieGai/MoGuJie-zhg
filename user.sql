@@ -1,0 +1,13 @@
+INSERT INTO `user` VALUES (1, 'qwe123', '000000');
+INSERT INTO `user` VALUES (2, 'hhhhh', '000000');
+INSERT INTO `user` VALUES (3, 'hhhhh', '000000');
+INSERT INTO `user` VALUES (4, 'zhga', '');
+INSERT INTO `user` VALUES (5, 'zhga', '');
+INSERT INTO `user` VALUES (6, 'zhga', '');
+INSERT INTO `user` VALUES (7, 'zhga', '');
+INSERT INTO `user` VALUES (8, 'ggggg', '999999');
+INSERT INTO `user` VALUES (9, 'ggggg', '999999');
+INSERT INTO `user` VALUES (10, 'username', 'password');
+INSERT INTO `user` VALUES (11, 'zhangsan', '999999');
+INSERT INTO `user` VALUES (12, 'zhouhh', '123456');
+INSERT INTO `user` VALUES (13, 'gaigai', '12345678');

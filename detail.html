@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/detail.js"></script>
+	<body>
+		<!--头部开始-->
+		<div id="header">
+			<div class="wrap clear">
+				
+				<a href="#" class="left">蘑菇街首页</a>
+				
+				<ul class="right">
+					<li class="li1 "><a href="javascript:;" class="login">登录</a></li>
+					<li class="li1"><a href="javascript:;" class="text">我的订单</a></li>
+					<li class="li1"><a href="javascript:;" class="cart-info-wrap"><span class="cart-info">购物车</span></a><i class=""></i>
+						<div id="box_cars">购物车里没有商品！</div>
+					</li>
+
+					<li class="li1"><a href="javascript:;" class="client">客户服务</a><i></i>
+						<div class="sub_nav">
+							<p><a href="#" class="clear_left">消费者服务</a></p>
+							<p><a href="#" class="clear_left">商家服务</a></p>
+							<p><a href="#" class="clear_left">规则中心</a></p>
+						</div>
+					</li>
+					<li class="li1"><a href="javascript:;" class="xiaodian">我的小店</a><i></i>
+						<ol class="sub_nav">
+							<li><a href="#">管理后台</a></li>
+							<li><a href="#">商家社区</a></li>
+							<li><a href="#">商家培训</a></li>
+							<li><a href="#">市场入驻</a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+			<div class="mid_container clear" id="detail_seach">
+				<div class="wrap clear detail_wrap" id="detail_wrap">
+					<div class="mid_left">
+						<a href="#">
+							<img src="http://s15.mogucdn.com/b7/pic/160727/13nyer_ifqtcyrzge4tmmjqmezdambqgyyde_320x320.jpg_100x100.jpg" alt="" />
+							<div class="tail_left">
+								<p>七色汇美</p>							
+							</div>
+						</a>
+					</div>
+					
+					<div class="mid_mid tail_mid">
+						<div class="top_nav_search">
+							<div class="search">
+								<div class="selectbox">
+									<span class="selected">搜商品 <i></i></span>
+									<ol>
+										<li class="current"><a href="">商品</a></li>
+										<li class="shop"><a href="">店铺</a></li>
+									</ol>
+								</div>
+								<from id="top_nav_from">
+									<input type="text" placeholder="手机壳"/>
+									<input type="submit" class="ts_btn" value="搜索" placeholder="卫衣"/>
+								</from>
+							</div>
+							<div class="ts_hotwords">
+								<a href="">眉笔</a>
+								<a href="">袜子</a>
+								<a href="">手机壳</a>
+								<a href="">内裤</a>
+								<a href="">牛仔裤</a>
+								<a href="">短袖t恤</a>
+								<a href="">卫衣</a>
+								<a href="">时尚套装</a>
+								<a href="">口红</a>
+								<a href="">小白鞋</a>
+							</div>
+						</div>
+					</div>
+					<div class="mid_right detail_right">
+						<a href=""><input type="text" value="搜本店" class="sbd" /></a>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!--头部结束-->
+		<div id="bg"></div>
+		<!--放大镜-->
+		<!--<div id="fangdajing">
+			
+			<div class="wrap clear">
+				<div id="spic">
+					<img src="http://s3.mogucdn.com/mlcdn/55cf19/171008_29l5e32ic20hi50bel801d29i199b_640x960.jpg_468x468.jpg" alt="">
+					<div id="sf"></div>
+				</div>
+				<div id="bf">
+					<img src="http://s3.mogucdn.com/mlcdn/55cf19/171008_29l5e32ic20hi50bel801d29i199b_640x960.jpg_468x468.jpg" alt="" id="bpic">
+				</div>
+				<div id="ulist">
+					<a href="javascript:;" id="left_fdj">&lt;</a>
+						<div id="list" class="ul123 ul3">
+							<ul class="ul1 ul123">
+								<li class="li123"><img class="detail_img" src="http://s3.mogucdn.com/mlcdn/55cf19/171008_29l5e32ic20hi50bel801d29i199b_640x960.jpg_100x100.jpg" alt=""></li>
+								<li><img src="http://s3.mogucdn.com/mlcdn/55cf19/171008_29l5e32ic20hi50bel801d29i199b_640x960.jpg_100x100.jpg" alt=""></li>
+								
+							</ul>
+						</div>
+					<a href="javascript:;" id="right_fdj">&gt;</a>
+				</div>
+				
+			</div>
+		</div>-->
+		
+	<div class="detail_con">
+      	 <div class="detail_img">
+      	 	<dl>
+      	 		<dt>
+      	 			<div class="middleImg">
+      	 				<img src="http://s3.mogucdn.com/mlcdn/55cf19/171008_29l5e32ic20hi50bel801d29i199b_640x960.jpg_468x468.jpg">
+      	 				<div class="Zoom" style="display: none; top: 192px; left: 58.5px;">
+      	 				</div>
+      	 			</div>
+      	 		</dt>
+      	 		<dd class="smallImg_box">
+      	 			<div class="Lprev"></div>
+      	 			<div class="Lnext"></div>
+      	 			<ul class="desmall_Img">
+      	 				<li class="desmallImg"><img src="http://s3.mogucdn.com/mlcdn/c45406/171124_4liaahh848d58e120965kbb6dke96_640x960.jpg_100x100.jpg" alt="" width="85" height="85"></li>
+      	 				<li class="desmallImg"><img src="http://s3.mogucdn.com/mlcdn/c45406/171124_7d8bfedai8a3b6k7b1i79gg8154e0_640x960.jpg_100x100.jpg" alt="" width="85" height="85"></li>
+      	 				<li class="desmallImg"><img src="http://s3.mogucdn.com/mlcdn/c45406/171124_07g7l2k449h1da1gh0ibb1a2j8f92_640x960.jpg_100x100.jpg" alt="" width="85" height="85"></li>
+      	 				<li class="desmallImg"><img src="http://s3.mogucdn.com/mlcdn/c45406/171124_2h4fj7bde4242516b19c5kfhcfd8j_640x960.jpg_100x100.jpg" alt="" width="85" height="85"></li>
+      	 				<li class="desmallImg"><img src="http://s3.mogucdn.com/mlcdn/c45406/171124_6bea5766ceb6902d3laihbe2li3f8_640x960.jpg_100x100.jpg" alt="" width="85" height="85"></li>
+      	 			</ul>
+      	 			
+      	 		</dd>
+      	 		<dd>
+      	 			<div class="ZoomWindow" style="display: none;">
+      	 				 <img src="http://s3.mogucdn.com/mlcdn/55cf19/171008_29l5e32ic20hi50bel801d29i199b_640x960.jpg_468x468.jpg">
+      	 			</div>
+      	 		</dd>
+      	 	</dl>
+      	 </div>
+      	 
+      	 <div class="car_title">
+      	 	<span class="car_title_title">
+      	 		冬装新款韩版宽松百搭大毛领棉服外套女休闲小个子连帽面包服大衣
+      	 	</span>
+      	 	<div class="car_bg">
+      	 		<div class="car_bg_line3">
+      	 			<span class="car_fixed_info">现价：</span>
+      	 			<span class="car_fixed_info red">¥153.00</span>
+      	 			<span class="car_fixed_info del">¥218.58</span>
+      	 		</div>
+      	 		<div class="car_bg_line3">
+      	 			<div class="car_left">2人拼团:<span class="car_now_price">¥151.00</span></div>
+      	 			<div class="car_right">评价：&nbsp;21 &nbsp;&nbsp;累计销量：&nbsp; 237</div>
+      	 		</div>
+      	 		<div class="car_bg_line3"></div>
+      	 	</div>
+      	 	<div class="car_infos">
+      	 		<dl>
+      	 			<dt>客服 ：</dt>
+      	 			<dd class="gif_pic"><div class="boxx"></div></dd>
+      	 		</dl>
+      	 		<dl>
+      	 			<dt>颜色：</dt>
+      	 			<dd><div class="color_box"><img src="http://s3.mogucdn.com/mlcdn/c45406/171119_23bl3d9if8eed8h02ll8bb4fj61de_640x960.jpg_100x100.jpg" alt="" /></div></dd>
+      	 		</dl>
+      	 		
+      	 		<dl>
+      	 			<dt>尺码：</dt>
+      	 			<dd><ul class="size">
+      	 				<li>S</li>
+      	 				<li>M</li>
+      	 				<li>L</li>
+      	 			</ul></dd>
+      	 		</dl>
+      	 		
+      	 		<dl>
+      	 			<dt>数量：</dt>
+      	 			<dd><ul class="size">
+      	 				<li class="reduce">-</li>
+      	 				<li class="quieties"> 1</li>
+      	 				<li class="add">+</li>
+      	 				<li class="kucun">库存2761件</li>
+      	 			</ul></dd>
+      	 		</dl>
+      	 	</div>
+      	 	<div class="car_button">
+      	 		<div class="car_button_left">立即购买</div>
+      	 		<div class="car_button_right">加入购物车</div>
+      	 		<div class="car_icon"></div>
+      	 	</div>
+      	 </div>
+      	 
+      	 <!--<div class="detail_textinfo">
+      	 	 <ul>
+      	 	 	<li class="info_first">
+      	 	 		<dl>
+      	 	 			<dt> <p>Sophie &amp; Stephie (S&amp;S)</p> </dt>
+      	 	 			<dd>
+      	 	 				<h4>镂空网格半身裙-藏青 SS316-12003</h4>
+      	 	 				<p>货号：5781472032731</p>
+      	 	 			</dd>
+      	 	 		</dl>
+      	 	 	</li>
+                <li class="info_two">
+                	
+                	<dl style="padding: 5px 13px;"></dl>
+                	<table>
+            
+                		<tbody><tr>
+                			<td class="price_left">
+                				<dl>
+                					<dt>￥<span>268</span> </dt>
+                					<dd>专柜价 ： ￥ 438.00</dd>
+                				</dl>
+                			</td>
+                            <td class="price_center">红卡会员价</td>
+                			<td class="price_right"><b></b>会员价</td>
+                		</tr>
+                	</tbody></table>
+                </li>
+      	 	    <li class="info_three">
+      	 	    	<dl>
+      	 	    		<dt>色系</dt>
+      	 	    		<dd>蓝色系</dd>
+      	 	    	</dl>
+      	 	    </li>
+      	 	    <li class="info_four">
+      	 	    	<dl>
+      	 	    		<dt>大小</dt>
+      	 	    		<dd>S</dd>
+      	 	    		<dd>M</dd>
+      	 	    		<dd>L</dd>
+      	 	    		<dd>XL</dd>
+      	 	    	</dl>
+      	 	    </li>
+      	 	    <li class="info_five">
+      	 	    	<dl>
+      	 	    		<dt>发货门店</dt>
+      	 	    		<dd>
+      	 	    			此货品将由离您最近的
+      	 	    			<a href="#">SS女装王府井旗舰店</a>
+      	 	    			 为您发货。预计0-1个工作日发货。
+      	 	    		</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt>发货时效</dt>
+      	 	    		<dd>
+      	 	    			预计0-1个工作日发货，延迟发货慢必赔！
+      	 	    		    <span class="look_btn" style="cursor:pointer;">查看详情 》</span>
+      	 	    		</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt>温馨提示</dt>
+      	 	    		<dd>本商品不支持货到付款</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt>包邮政策</dt>
+      	 	    		<dd>白金钻石顺丰包邮，注册用户满99元免邮（稀奇艺术品牌及货到付款除外）</dd>
+      	 	    	</dl>
+      	 	    </li>
+      	 	    <li class="info_six">
+      	 	    	
+      	 	    	<div class="add">
+      	 	    		<span>1</span>
+      	 	    		<a href="javascript:;" class="info_add">+</a>
+      	 	    		<a href="javascript:;" class="info_reduce">_</a>
+      	 	    	</div>
+      	 	    	<a href="javascript:;">加入购物车</a>
+      	 	    	<a href="orderConfirm.html">结算</a>
+      	 	    </li>
+      	 	    <li class="info_seven">
+      	 	    	<dl>
+      	 	    		<dt class="bg1"></dt>
+      	 	    		<dd>收藏</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt class="bg2"></dt>
+      	 	    		<dd>分享</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt class="bg3"></dt>
+      	 	    		<dd>品牌官方授权</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt class="bg4"></dt>
+      	 	    		<dd>全球快递</dd>
+      	 	    	</dl>
+      	 	    	<dl>
+      	 	    		<dt class="bg5"></dt>
+      	 	    		<dd>商务部诚信企业</dd>
+      	 	    	</dl>
+      	 	    </li>
+      	 	 </ul>
+      	 </div>
+   -->
+	</div>
+      
+      
+		<div class="detail_footer"></div>
+	</body>
+</html>
